@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+
+.title{
+    font-size: 250px;
+    display: flex;
+    color: aliceblue;
+    opacity: 10%;
+    width: 310px;
+    height: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/photo-1647346425804-34383b95644b.jpg);
+    background-size: 1920px;
+    background-attachment: fixed;
+}
+
+.seleccion-mascota{
+    font-size: 35px;
+    margin-top: 0px;
+    color: aliceblue;
+}
+
+#seleccion{
+    border-color: aquamarine;
+    background: none;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 300px;
+    margin-top: 15px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta{
+    display: flex;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 140px;
+    justify-content: center;
+}
+
+.tarjeta img{
+    width: 100px;
+}
+
+.tarjeta:hover{
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    height: 150px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background-color: rgb(29, 209, 38);
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    height: 150px;
+}
+
+#mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+#nadie-elegido{
+    color: aliceblue;
+}
+
+.titulo-mapa{
+    color: aliceblue;
+}
+
+#ver-mapa button{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: none;
+    border: 2px solid white;
+    color: aliceblue;
+    font-family: 'Fredoka', sans-serif;
+    margin: 5px;
+}
+
+#ver-mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.seleccion-ataque{
+    font-size: 35px;
+    margin-top: 0px;
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 100px;
+}
+
+.tarjetas-ataques{
+    display: flex;
+    gap: 10px;
+}
+
+#ataque{
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    color: aliceblue;
+    margin-top: 270px;
+}
+
+#fuego{
+    border-radius: 5px;
+    background: red;
+    border-color: red;
+    color: yellow;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+#agua{
+    border-radius: 5px;
+    background: aqua;
+    border-color: aqua;
+    color: white;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+#tierra{
+    border-radius: 5px;
+    background: brown;
+    border-color: brown;
+    color: black;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+#reiniciar{
+    background: none;
+    border-color: aquamarine;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1020px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
+    .title{
+        font-size: 200px;
+    }
+}

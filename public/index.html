@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>MOKEPON</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="titulo" class="title">MOKEPON!</h1>
+        <section id="mascota">
+
+            <h2 class="seleccion-mascota">SELECCIONA TU MASCOTA: </h2>
+
+            <div id="contenedor-tarjetas" class="tarjetas">
+            </div>
+
+            <button id="seleccion">Seleccionar</button>
+        </section>
+
+        <section id="nadie-elegido">
+            <h3>NINGUNA MASCOTA SELECCIONADA, POR FAVOR ELIJA UNA</h3>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="titulo-mapa">Recorre el mapa con tu mascota</h1>
+            <canvas id="mapa"></canvas>
+            <button class="botones-movimiento"
+                onmouseup="detenerMovimiento()"
+                ontouchend="detenerMovimiento()" 
+                onmousedown="moverMascotaAr()" 
+                ontouchstart="moverMascotaAr()">
+                ↑</button>
+            <div>
+                <button class="botones-movimiento" 
+                    onmouseup="detenerMovimiento()" 
+                    ontouchend="detenerMovimiento()" 
+                    onmousedown="moverMascotaI()" 
+                    ontouchstart="moverMascotaI()">
+                    ←</button>
+                <button class="botones-movimiento" 
+                    onmouseup="detenerMovimiento()" 
+                    ontouchend="detenerMovimiento()" 
+                    onmousedown="moverMascotaAb()" 
+                    ontouchstart="moverMascotaAb()">
+                    ↓</button>
+                <button class="botones-movimiento" 
+                    onmouseup="detenerMovimiento()" 
+                    ontouchend="detenerMovimiento()" 
+                    onmousedown="moverMascotaD()" 
+                    ontouchstart="moverMascotaD()">
+                    →</button>
+            </div>
+        </section>
+
+        <section id="ataque">
+
+            <h2 class="seleccion-ataque">SELECCIONA TU ATAQUE: </h2>
+
+            <div id="contenedor-ataques" class="tarjetas-ataques">
+            </div>
+
+            <div class="ataques">
+                <div>
+                    <p>
+                        Tu mascota:
+                        <br><span id="mascota-elegida"></span>
+                    </p>
+                    <p>victorias: <span id="vidas-jugador">0</span></p>
+                    <div id="ataque-jugador"></div>
+                </div>
+                <div>
+                    <section id="mensajes">
+                        <p>
+                            <br><span id="resultadoPartida"></span>
+                        </p>
+                    </section>
+    
+                    <section id="reiniciar">
+                        <button id="reiniciar">JUGAR DE NUEVO</button>
+                    </section>
+                </div>
+                <div>
+                    <p>Mascota del enemigo: <span id="mascota-enemigo"></span></p>
+                    <p>Victorias: <span id="vidas-enemigo">0</span></p>
+                    <div id="ataque-enemigo"></div>
+                </div>
+            </div>
+        </section>
+        <script src="functions.js"></script>
+    </body>
+</html>
